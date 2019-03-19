@@ -1,0 +1,6 @@
+framework module MobiusTest {
+  umbrella header "MobiusTest-umbrella.h"
+
+  export *
+  module * { export * }
+}

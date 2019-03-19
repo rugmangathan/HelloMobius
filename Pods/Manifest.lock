@@ -1,0 +1,36 @@
+PODS:
+  - MobiusCore (0.1-alpha)
+  - MobiusExtras (0.1-alpha):
+    - MobiusCore (= 0.1-alpha)
+  - MobiusNimble (0.1-alpha):
+    - MobiusCore (= 0.1-alpha)
+    - MobiusTest (= 0.1-alpha)
+    - Nimble (~> 7.0)
+  - MobiusTest (0.1-alpha):
+    - MobiusCore (= 0.1-alpha)
+  - Nimble (7.3.4)
+
+DEPENDENCIES:
+  - MobiusCore (= 0.1.0-alpha)
+  - MobiusExtras (= 0.1.0-alpha)
+  - MobiusNimble (= 0.1.0-alpha)
+  - MobiusTest (= 0.1.0-alpha)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - MobiusCore
+    - MobiusExtras
+    - MobiusNimble
+    - MobiusTest
+    - Nimble
+
+SPEC CHECKSUMS:
+  MobiusCore: 900e9ac7e7f8a6e789b627ec454dbf38e2fa840f
+  MobiusExtras: 36bbd4a51632a97ae570defe6e25b448166ac4c5
+  MobiusNimble: 51bbcbc0faf95ab97dfd64f9370a256ec8a9d895
+  MobiusTest: d51526d35811190acc23643dd6da00eb3b407301
+  Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
+
+PODFILE CHECKSUM: cb86df85b09690317bb37dda2d6a3909fd606c5b
+
+COCOAPODS: 1.6.0

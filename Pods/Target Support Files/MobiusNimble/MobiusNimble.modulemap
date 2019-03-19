@@ -1,0 +1,6 @@
+framework module MobiusNimble {
+  umbrella header "MobiusNimble-umbrella.h"
+
+  export *
+  module * { export * }
+}

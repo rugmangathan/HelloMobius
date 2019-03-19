@@ -1,0 +1,6 @@
+framework module MobiusExtras {
+  umbrella header "MobiusExtras-umbrella.h"
+
+  export *
+  module * { export * }
+}
