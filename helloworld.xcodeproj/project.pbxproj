@@ -22,6 +22,8 @@
 		55BBEAA12241599B0094EE4C /* CounterLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BBEAA02241599B0094EE4C /* CounterLogic.swift */; };
 		55BBEAA322415E730094EE4C /* CounterEffectHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BBEAA222415E730094EE4C /* CounterEffectHandler.swift */; };
 		55BBEAA52241625B0094EE4C /* ControllerViewActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BBEAA42241625B0094EE4C /* ControllerViewActions.swift */; };
+		55BBEAA7224218DF0094EE4C /* CounterEffectHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BBEAA6224218DF0094EE4C /* CounterEffectHandlerTests.swift */; };
+		55BBEAA922421B8B0094EE4C /* MockCounterViewActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BBEAA822421B8B0094EE4C /* MockCounterViewActions.swift */; };
 		89D4190AACA901DA97644F11 /* Pods_helloworld.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9583FA7167FB09DD8603DABA /* Pods_helloworld.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +66,8 @@
 		55BBEAA02241599B0094EE4C /* CounterLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterLogic.swift; sourceTree = "<group>"; };
 		55BBEAA222415E730094EE4C /* CounterEffectHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterEffectHandler.swift; sourceTree = "<group>"; };
 		55BBEAA42241625B0094EE4C /* ControllerViewActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerViewActions.swift; sourceTree = "<group>"; };
+		55BBEAA6224218DF0094EE4C /* CounterEffectHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterEffectHandlerTests.swift; sourceTree = "<group>"; };
+		55BBEAA822421B8B0094EE4C /* MockCounterViewActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCounterViewActions.swift; sourceTree = "<group>"; };
 		9583FA7167FB09DD8603DABA /* Pods_helloworld.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_helloworld.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCD1774D43AD348657B1EE35 /* Pods-helloworld.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-helloworld.release.xcconfig"; path = "Target Support Files/Pods-helloworld/Pods-helloworld.release.xcconfig"; sourceTree = "<group>"; };
 		EC93F5AE31F440674FDE1038 /* Pods-helloworld.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-helloworld.debug.xcconfig"; path = "Target Support Files/Pods-helloworld/Pods-helloworld.debug.xcconfig"; sourceTree = "<group>"; };
@@ -170,6 +174,8 @@
 			isa = PBXGroup;
 			children = (
 				55BBEA98224158880094EE4C /* CounterLogicTests.swift */,
+				55BBEAA6224218DF0094EE4C /* CounterEffectHandlerTests.swift */,
+				55BBEAA822421B8B0094EE4C /* MockCounterViewActions.swift */,
 			);
 			path = counter;
 			sourceTree = "<group>";
@@ -444,7 +450,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				55BBEA7E224156560094EE4C /* helloworldTests.swift in Sources */,
+				55BBEAA922421B8B0094EE4C /* MockCounterViewActions.swift in Sources */,
 				55BBEA99224158880094EE4C /* CounterLogicTests.swift in Sources */,
+				55BBEAA7224218DF0094EE4C /* CounterEffectHandlerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
