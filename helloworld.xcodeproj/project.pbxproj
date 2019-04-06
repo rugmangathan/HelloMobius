@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		2DD401496ED36CB868C8CDBA /* Pods_helloworldTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F73D13BB2B908B3B6F5ED6DD /* Pods_helloworldTests.framework */; };
 		55BBEA69224156550094EE4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BBEA68224156550094EE4C /* AppDelegate.swift */; };
-		55BBEA6B224156550094EE4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BBEA6A224156550094EE4C /* ViewController.swift */; };
+		55BBEA6B224156550094EE4C /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BBEA6A224156550094EE4C /* CounterViewController.swift */; };
 		55BBEA6E224156550094EE4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55BBEA6C224156550094EE4C /* Main.storyboard */; };
 		55BBEA70224156560094EE4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55BBEA6F224156560094EE4C /* Assets.xcassets */; };
 		55BBEA73224156560094EE4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55BBEA71224156560094EE4C /* LaunchScreen.storyboard */; };
@@ -48,7 +48,7 @@
 		2677C5172CD1AAB699DDCBB3 /* Pods-helloworldTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-helloworldTests.debug.xcconfig"; path = "Target Support Files/Pods-helloworldTests/Pods-helloworldTests.debug.xcconfig"; sourceTree = "<group>"; };
 		55BBEA65224156550094EE4C /* helloworld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = helloworld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55BBEA68224156550094EE4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		55BBEA6A224156550094EE4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		55BBEA6A224156550094EE4C /* CounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
 		55BBEA6D224156550094EE4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		55BBEA6F224156560094EE4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55BBEA72224156560094EE4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -127,13 +127,12 @@
 		55BBEA67224156550094EE4C /* helloworld */ = {
 			isa = PBXGroup;
 			children = (
-				55BBEA962241585A0094EE4C /* counter */,
 				55BBEA68224156550094EE4C /* AppDelegate.swift */,
-				55BBEA6A224156550094EE4C /* ViewController.swift */,
-				55BBEA6C224156550094EE4C /* Main.storyboard */,
 				55BBEA6F224156560094EE4C /* Assets.xcassets */,
-				55BBEA71224156560094EE4C /* LaunchScreen.storyboard */,
+				55BBEA962241585A0094EE4C /* counter */,
 				55BBEA74224156560094EE4C /* Info.plist */,
+				55BBEA71224156560094EE4C /* LaunchScreen.storyboard */,
+				55BBEA6C224156550094EE4C /* Main.storyboard */,
 			);
 			path = helloworld;
 			sourceTree = "<group>";
@@ -160,6 +159,7 @@
 		55BBEA962241585A0094EE4C /* counter */ = {
 			isa = PBXGroup;
 			children = (
+				55BBEA6A224156550094EE4C /* CounterViewController.swift */,
 				55BBEA9A224158DB0094EE4C /* CounterLoopTypes.swift */,
 				55BBEA9E2241596A0094EE4C /* CounterEffect.swift */,
 				55BBEA9C224159390094EE4C /* CounterEvent.swift */,
@@ -436,7 +436,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55BBEA6B224156550094EE4C /* ViewController.swift in Sources */,
+				55BBEA6B224156550094EE4C /* CounterViewController.swift in Sources */,
 				55BBEAA322415E730094EE4C /* CounterEffectHandler.swift in Sources */,
 				55BBEAA12241599B0094EE4C /* CounterLogic.swift in Sources */,
 				55BBEA9B224158DB0094EE4C /* CounterLoopTypes.swift in Sources */,

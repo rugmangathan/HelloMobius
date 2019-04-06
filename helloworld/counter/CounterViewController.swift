@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CounterViewController.swift
 //  helloworld
 //
 //  Created by Captain America on 19/03/19.
@@ -9,7 +9,7 @@
 import UIKit
 import MobiusCore
 
-class ViewController: UIViewController, CounterViewActions {
+class CounterViewController: UIViewController, CounterViewActions {
   private lazy var effectHandler: CounterEffectHandler = {
     let counterEffectHandler = CounterEffectHandler()
     counterEffectHandler.counterViewActions = self
