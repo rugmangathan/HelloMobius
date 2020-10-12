@@ -105,12 +105,12 @@
 		55BBEA5C224156550094EE4C = {
 			isa = PBXGroup;
 			children = (
+				8E32866EA27AED5F276709CF /* Frameworks */,
 				55BBEA67224156550094EE4C /* helloworld */,
 				55BBEA7C224156560094EE4C /* helloworldTests */,
 				55BBEA87224156560094EE4C /* helloworldUITests */,
-				55BBEA66224156550094EE4C /* Products */,
 				657A3DFD1D724AD6A7AD310C /* Pods */,
-				8E32866EA27AED5F276709CF /* Frameworks */,
+				55BBEA66224156550094EE4C /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,11 +128,9 @@
 			isa = PBXGroup;
 			children = (
 				55BBEA68224156550094EE4C /* AppDelegate.swift */,
-				55BBEA6F224156560094EE4C /* Assets.xcassets */,
 				55BBEA962241585A0094EE4C /* counter */,
-				55BBEA74224156560094EE4C /* Info.plist */,
-				55BBEA71224156560094EE4C /* LaunchScreen.storyboard */,
-				55BBEA6C224156550094EE4C /* Main.storyboard */,
+				63D6E5642534953A00F9F439 /* Resources */,
+				63D6E5652534956A00F9F439 /* Storyboards */,
 			);
 			path = helloworld;
 			sourceTree = "<group>";
@@ -140,10 +138,10 @@
 		55BBEA7C224156560094EE4C /* helloworldTests */ = {
 			isa = PBXGroup;
 			children = (
-				63D6E51925348D7300F9F439 /* Mocks */,
 				55BBEA97224158690094EE4C /* counter */,
 				55BBEA7D224156560094EE4C /* helloworldTests.swift */,
 				55BBEA7F224156560094EE4C /* Info.plist */,
+				63D6E51925348D7300F9F439 /* Mocks */,
 			);
 			path = helloworldTests;
 			sourceTree = "<group>";
@@ -186,6 +184,24 @@
 				63D6E53B2534902100F9F439 /* GeneratedMocks.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		63D6E5642534953A00F9F439 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				55BBEA6F224156560094EE4C /* Assets.xcassets */,
+				55BBEA74224156560094EE4C /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		63D6E5652534956A00F9F439 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				55BBEA71224156560094EE4C /* LaunchScreen.storyboard */,
+				55BBEA6C224156550094EE4C /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		657A3DFD1D724AD6A7AD310C /* Pods */ = {
@@ -635,7 +651,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CCQ8AH27PK;
-				INFOPLIST_FILE = helloworld/Info.plist;
+				INFOPLIST_FILE = helloworld/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -654,7 +670,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CCQ8AH27PK;
-				INFOPLIST_FILE = helloworld/Info.plist;
+				INFOPLIST_FILE = helloworld/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
