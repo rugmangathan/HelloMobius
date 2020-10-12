@@ -9,12 +9,16 @@
 import MobiusExtras
 
 class CounterEffectHandler: ConnectableClass<CounterEffect, CounterEvent> {
-  var counterViewActions: CounterViewActions!
+  let counterViewActions: CounterViewActions
+
+  init(_ counterViewActions: CounterViewActions) {
+    self.counterViewActions = counterViewActions
+  }
 
   override func handle(_ input: CounterEffect) {
     switch input {
-    case .cannotGoBelowZeroEffect:
-      counterViewActions.showCannotGoBelowZeroAlert()
+      case .cannotGoBelowZeroEffect:
+        counterViewActions.showCannotGoBelowZeroAlert()
     }
   }
 }

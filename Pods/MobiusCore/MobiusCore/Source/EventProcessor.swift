@@ -1,4 +1,4 @@
-// Copyright (c) 2019 Spotify AB.
+// Copyright (c) 2020 Spotify AB.
 //
 // Licensed to the Apache Software Foundation (ASF) under one
 // or more contributor license agreements.  See the NOTICE file
@@ -19,39 +19,41 @@
 
 import Foundation
 
-/// Internal class that manages the atomic state updates and notifications of model changes when processing of events via
-/// the Update function.
-class EventProcessor<T: LoopTypes>: Disposable, CustomDebugStringConvertible {
-    let update: Update<T>
-    let publisher: ConnectablePublisher<Next<T.Model, T.Effect>>
+/// Internal class that manages the atomic state updates and notifications of model changes when processing of events
+/// via the Update function.
+class EventProcessor<Model, Event, Effect>: Disposable, CustomDebugStringConvertible {
+    let update: Update<Model, Event, Effect>
+    let publisher: ConnectablePublisher<Next<Model, Effect>>
+    let access: ConcurrentAccessDetector
 
-    private let queue: DispatchQueue
-
-    private var currentModel: T.Model?
-    private var queuedEvents = [T.Event]()
+    private var currentModel: Model?
+    private var queuedEvents = [Event]()
+    private var disposed = false
 
     public var debugDescription: String {
-        let modelDescription: String
-        if let currentModel = currentModel {
-            modelDescription = String(reflecting: currentModel)
-        } else {
-            modelDescription = "nil"
+        return access.guard {
+            let modelDescription: String
+            if let currentModel = currentModel {
+                modelDescription = String(reflecting: currentModel)
+            } else {
+                modelDescription = "nil"
+            }
+            return "<\(modelDescription), \(queuedEvents)>"
         }
-        return "<\(modelDescription), \(queuedEvents)>"
     }
 
     init(
-        update: @escaping Update<T>,
-        publisher: ConnectablePublisher<Next<T.Model, T.Effect>>,
-        queue: DispatchQueue
+        update: Update<Model, Event, Effect>,
+        publisher: ConnectablePublisher<Next<Model, Effect>>,
+        accessGuard: ConcurrentAccessDetector = ConcurrentAccessDetector()
     ) {
         self.update = update
         self.publisher = publisher
-        self.queue = queue
+        access = accessGuard
     }
 
-    func start(from first: First<T.Model, T.Effect>) {
-        queue.sync(flags: .barrier) {
+    func start(from first: First<Model, Effect>) {
+        access.guard {
             currentModel = first.model
 
             publisher.post(Next.next(first.model, effects: first.effects))
@@ -64,10 +66,12 @@ class EventProcessor<T: LoopTypes>: Disposable, CustomDebugStringConvertible {
         }
     }
 
-    func accept(_ event: T.Event) {
-        queue.async(flags: .barrier) {
+    func accept(_ event: Event) {
+        access.guard {
+            guard !disposed else { return }
+
             if let current = self.currentModel {
-                let next = self.update(current, event)
+                let next = self.update.update(model: current, event: event)
 
                 if let newModel = next.model {
                     self.currentModel = newModel
@@ -81,10 +85,20 @@ class EventProcessor<T: LoopTypes>: Disposable, CustomDebugStringConvertible {
     }
 
     func dispose() {
-        publisher.dispose()
+        access.guard {
+            disposed = true
+            publisher.dispose()
+        }
     }
 
-    func readCurrentModel() -> T.Model? {
-        return queue.sync { currentModel }
+    func readCurrentModel() -> Model? {
+        return access.guard { currentModel }
+    }
+
+    var latestModel: Model {
+        guard let model = readCurrentModel() else {
+            preconditionFailure("latestModel may only be invoked after start()")
+        }
+        return model
     }
 }

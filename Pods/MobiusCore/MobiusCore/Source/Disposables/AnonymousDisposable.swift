@@ -1,4 +1,4 @@
-// Copyright (c) 2019 Spotify AB.
+// Copyright (c) 2020 Spotify AB.
 //
 // Licensed to the Apache Software Foundation (ASF) under one
 // or more contributor license agreements.  See the NOTICE file
@@ -20,14 +20,23 @@
 import Foundation
 
 /// The `AnonymousDisposable` class implements a `Disposable` type that disposes of resources via a closure.
-public class AnonymousDisposable: MobiusCore.Disposable {
+public final class AnonymousDisposable: MobiusCore.Disposable {
     /// The closure which disposes of the object.
     private var disposer: (() -> Void)?
-    private let lock = NSRecursiveLock()
+    private let lock = DispatchQueue(label: "Mobius.AnonymousDisposable")
 
-    /// Initialize the `DisposableClosure` with the given code to run on disposing the resources.
+    /// Creates a type-erased `AnonymousDisposable` that wraps the given instance.
+    public convenience init<Disposable: MobiusCore.Disposable>(_ base: Disposable) {
+        // Note: This doesn’t use the thunk-avoiding pattern of the `Any...` wrappers, because it would break the
+        // single-disposal guarantee that `AnonymousDisposable` adds. This could be handled by making the contents of
+        // `dispose` a closure we set up in `init(disposer:)`, but that doesn’t seem motivated without evidence that
+        // recursive wrapping of `AnonymousDisposable` is a common thing.
+        self.init(disposer: base.dispose)
+    }
+
+    /// Create an `AnonymousDisposable` that will run the provided closure when disposed.
     ///
-    /// - Warning: The given _disposer_ **closure will be discarded** as soon as the resources have been disposed.
+    /// - Warning: The given `disposer` closure **will be discarded** as soon as the resources have been disposed.
     ///
     /// - Parameter disposer: The code which disposes of the resources.
     public init(disposer: @escaping () -> Void) {
@@ -35,11 +44,13 @@ public class AnonymousDisposable: MobiusCore.Disposable {
     }
 
     public func dispose() {
-        lock.synchronized {
-            guard let disposer = disposer else { return }
+        var disposer: (() -> Void)?
 
-            disposer()
+        lock.sync {
+            disposer = self.disposer
             self.disposer = nil
         }
+
+        disposer?()
     }
 }

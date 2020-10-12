@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-helloworld/Pods-helloworld-frameworks.sh
+${BUILT_PRODUCTS_DIR}/MobiusCore/MobiusCore.framework
+${BUILT_PRODUCTS_DIR}/MobiusExtras/MobiusExtras.framework

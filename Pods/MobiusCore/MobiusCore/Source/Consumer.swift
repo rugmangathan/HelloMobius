@@ -1,4 +1,4 @@
-// Copyright (c) 2019 Spotify AB.
+// Copyright (c) 2020 Spotify AB.
 //
 // Licensed to the Apache Software Foundation (ASF) under one
 // or more contributor license agreements.  See the NOTICE file
@@ -20,4 +20,7 @@
 import Foundation
 
 /// A function that can receive values of some type.
-public typealias Consumer<ValueType> = (ValueType) -> Void
+public typealias Consumer<Value> = (Value) -> Void
+
+/// A function that can transform a Consumer.
+public typealias ConsumerTransformer<Value> = (@escaping Consumer<Value>) -> Consumer<Value>

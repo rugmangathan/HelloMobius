@@ -1,4 +1,4 @@
-// Copyright (c) 2019 Spotify AB.
+// Copyright (c) 2020 Spotify AB.
 //
 // Licensed to the Apache Software Foundation (ASF) under one
 // or more contributor license agreements.  See the NOTICE file
@@ -19,17 +19,15 @@
 
 import Foundation
 
-/// Baseclass for creating an action based `connectable`. Invoking the `connection` functions
-/// will block the current thread until done.
+/// Base class for creating an action based `connectable`.
+///
+/// Invoking the `connection` functions will block the current thread until done.
 open class ActionConnectable<Input, Output>: Connectable {
-    public typealias InputType = Input
-    public typealias OutputType = Output
-
     private var innerConnectable: ClosureConnectable<Input, Output>
 
-    /// Initialise with an action (no input, no output)
+    /// Initialise with an action (no input, no output).
     ///
-    /// - Parameter action: Called when the `connection` `accept` function is called
+    /// - Parameter action: Called when the `connection`’s `accept` function is called.
     public init(_ action: @escaping () -> Void) {
         innerConnectable = ClosureConnectable<Input, Output>({ _ in
             action()

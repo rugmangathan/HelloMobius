@@ -8,18 +8,19 @@
 
 @testable import helloworld
 import XCTest
+import Cuckoo
 
 class CounterEffectHandlerTests: XCTestCase {
   func test_shows_bummer_when_effect_is_cannot_go_below_zero() {
     // Setup
-    let effectHandler = CounterEffectHandler()
-    let counterViewActions = MockCounterViewActions()
-    effectHandler.counterViewActions = counterViewActions
+    let action = MockSpyCounterViewActions()
+      .withEnabledSuperclassSpy()
+    let effectHandler = CounterEffectHandler(action)
 
     // Act
     effectHandler.handle(CounterEffect.cannotGoBelowZeroEffect)
 
     // Assert
-    XCTAssertEqual(counterViewActions.showAlert, true)
+    verify(action, times(1)).showCannotGoBelowZeroAlert()
   }
 }

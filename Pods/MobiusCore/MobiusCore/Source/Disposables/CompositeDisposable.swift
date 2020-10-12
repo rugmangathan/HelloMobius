@@ -1,4 +1,4 @@
-// Copyright (c) 2019 Spotify AB.
+// Copyright (c) 2020 Spotify AB.
 //
 // Licensed to the Apache Software Foundation (ASF) under one
 // or more contributor license agreements.  See the NOTICE file
@@ -19,27 +19,32 @@
 
 import Foundation
 
-/// A CompositeDisposable holds onto the provided disposables and disposes
-/// all of them once its dispose() method is called.
-public class CompositeDisposable {
-    private let disposables: [Disposable]
-    let lock = NSRecursiveLock()
+/// A CompositeDisposable holds onto the provided disposables and disposes all of them once its `dispose` method is
+/// called.
+public final class CompositeDisposable {
+    private var disposables: [Disposable]
+    private let lock = DispatchQueue(label: "Mobius.CompositeDisposable")
 
-    /// Initialises a CompositeDisposable
+    /// Initialises a `CompositeDisposable`.
     ///
-    /// - Parameter disposables: an array of disposables
+    /// - Parameter disposables: an array of disposables.
     init(disposables: [Disposable]) {
         self.disposables = disposables
     }
 }
 
 extension CompositeDisposable: MobiusCore.Disposable {
-    /// Dispose function disposes all of the internal disposables
+    /// Dispose function disposes all of the internal disposables.
     public func dispose() {
-        lock.synchronized {
-            for disposable in disposables {
-                disposable.dispose()
-            }
+        var disposables = [Disposable]()
+
+        lock.sync {
+            disposables = self.disposables
+            self.disposables.removeAll()
+        }
+
+        for disposable in disposables {
+            disposable.dispose()
         }
     }
 }

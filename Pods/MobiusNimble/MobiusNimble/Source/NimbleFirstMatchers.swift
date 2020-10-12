@@ -1,4 +1,4 @@
-// Copyright (c) 2019 Spotify AB.
+// Copyright (c) 2020 Spotify AB.
 //
 // Licensed to the Apache Software Foundation (ASF) under one
 // or more contributor license agreements.  See the NOTICE file
@@ -26,7 +26,9 @@ import Nimble
 ///
 /// - Parameter predicates: Nimble `Predicate` that verifies a first. Can be produced through `FirstMatchers`
 /// - Returns: An `AssertFirst` function to be used with the `InitSpec`
-public func assertThatFirst<Model, Effect>(_ predicates: Nimble.Predicate<First<Model, Effect>>...) -> AssertFirst<Model, Effect> {
+public func assertThatFirst<Model, Effect>(
+    _ predicates: Nimble.Predicate<First<Model, Effect>>...
+) -> AssertFirst<Model, Effect> {
     return { (result: First<Model, Effect>) in
         predicates.forEach({ predicate in
             expect(result).to(predicate)
@@ -49,7 +51,10 @@ public func haveModel<Model: Equatable, Effect>(_ expected: Model) -> Nimble.Pre
 
         let expectedDescription = String(describing: expected)
         let actualDescription = String(describing: first.model)
-        return PredicateResult(bool: first.model == expected, message: .expectedCustomValueTo("be <\(expectedDescription)>", "<\(actualDescription)>"))
+        return PredicateResult(
+            bool: first.model == expected,
+            message: .expectedCustomValueTo("be <\(expectedDescription)>", "<\(actualDescription)>")
+        )
     })
 }
 
@@ -63,7 +68,10 @@ public func haveNoEffects<Model, Effect>() -> Nimble.Predicate<First<Model, Effe
         }
 
         let actualDescription = String(describing: first.effects)
-        return PredicateResult(bool: first.effects.isEmpty, message: .expectedCustomValueTo("have no effect", "<\(actualDescription)>"))
+        return PredicateResult(
+            bool: first.effects.isEmpty,
+            message: .expectedCustomValueTo("have no effect", "<\(actualDescription)>")
+        )
     })
 }
 
@@ -72,7 +80,7 @@ public func haveNoEffects<Model, Effect>() -> Nimble.Predicate<First<Model, Effe
 ///
 /// - Parameter effects: the effects to match (possibly empty)
 /// - Returns: a `Predicate` that matches `First` instances that include all the supplied effects
-public func haveEffects<Model, Effect: Equatable>(_ effects: Set<Effect>) -> Nimble.Predicate<First<Model, Effect>> {
+public func haveEffects<Model, Effect: Equatable>(_ effects: [Effect]) -> Nimble.Predicate<First<Model, Effect>> {
     return Nimble.Predicate<First<Model, Effect>>.define(matcher: { actualExpression -> Nimble.PredicateResult in
         guard let first = try actualExpression.evaluate() else {
             return unexpectedNilParameterPredicateResult
@@ -80,6 +88,17 @@ public func haveEffects<Model, Effect: Equatable>(_ effects: Set<Effect>) -> Nim
 
         let expectedDescription = String(describing: effects)
         let actualDescription = String(describing: first.effects)
-        return PredicateResult(bool: first.effects.isSuperset(of: effects), message: .expectedCustomValueTo("contain <\(expectedDescription)>", "<\(actualDescription)> (order doesn't matter)"))
+        return PredicateResult(
+            bool: effects.allSatisfy(first.effects.contains),
+            message: .expectedCustomValueTo(
+                "contain <\(expectedDescription)>",
+                "<\(actualDescription)> (order doesn't matter)"
+            )
+        )
     })
+}
+
+@available(*, deprecated, message: "use array of effects instead")
+public func haveEffects<Model, Effect: Equatable>(_ effects: Set<Effect>) -> Nimble.Predicate<First<Model, Effect>> {
+    return haveEffects(Array(effects))
 }

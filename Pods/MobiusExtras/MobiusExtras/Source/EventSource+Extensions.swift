@@ -1,4 +1,4 @@
-// Copyright (c) 2019 Spotify AB.
+// Copyright (c) 2020 Spotify AB.
 //
 // Licensed to the Apache Software Foundation (ASF) under one
 // or more contributor license agreements.  See the NOTICE file
@@ -26,10 +26,10 @@ public extension EventSource {
     /// - Parameters:
     ///   - map: Translation function to apply to the forwarded events.
     /// - Returns: An `EventSource` that translates and forwards event from the receiver.
-    func map<U>(_ map: @escaping (Event) -> U) -> AnyEventSource<U> {
+    func map<NewEvent>(transform: @escaping (Event) -> NewEvent) -> AnyEventSource<NewEvent> {
         return AnyEventSource { mappedEventConsumer in
             self.subscribe { originalEvent in
-                let mappedEvent = map(originalEvent)
+                let mappedEvent = transform(originalEvent)
                 mappedEventConsumer(mappedEvent)
             }
         }

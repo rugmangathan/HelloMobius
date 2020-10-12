@@ -1,4 +1,4 @@
-// Copyright (c) 2019 Spotify AB.
+// Copyright (c) 2020 Spotify AB.
 //
 // Licensed to the Apache Software Foundation (ASF) under one
 // or more contributor license agreements.  See the NOTICE file
@@ -20,21 +20,21 @@
 import MobiusCore
 
 public extension Connectable {
-    func contramap<NewInputType>(_ map: @escaping (NewInputType) -> InputType) -> AnyConnectable<NewInputType, OutputType> {
-        let newConnectClosure = { (consumer: @escaping Consumer<OutputType>) -> Connection<NewInputType> in
+    func contramap<NewInput>(_ map: @escaping (NewInput) -> Input) -> AnyConnectable<NewInput, Output> {
+        let newConnectClosure = { (consumer: @escaping Consumer<Output>) -> Connection<NewInput> in
             let connection = self.connect(consumer)
-            let mappedAcceptFunction = { (newTypeInput: NewInputType) in
+            let mappedAcceptFunction = { (newTypeInput: NewInput) in
                 let oldTypeInput = map(newTypeInput)
                 connection.accept(oldTypeInput)
             }
 
-            return Connection<NewInputType>(
+            return Connection<NewInput>(
                 acceptClosure: mappedAcceptFunction,
                 disposeClosure: connection.dispose
             )
         }
 
-        let contramapped = AnyConnectable<NewInputType, OutputType>(newConnectClosure)
+        let contramapped = AnyConnectable<NewInput, Output>(newConnectClosure)
 
         return contramapped
     }

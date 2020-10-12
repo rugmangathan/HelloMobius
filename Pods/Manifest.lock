@@ -1,23 +1,28 @@
 PODS:
-  - MobiusCore (0.1-alpha)
-  - MobiusExtras (0.1-alpha):
-    - MobiusCore (= 0.1-alpha)
-  - MobiusNimble (0.1-alpha):
-    - MobiusCore (= 0.1-alpha)
-    - MobiusTest (= 0.1-alpha)
-    - Nimble (~> 7.0)
-  - MobiusTest (0.1-alpha):
-    - MobiusCore (= 0.1-alpha)
-  - Nimble (7.3.4)
+  - Cuckoo (1.4.0):
+    - Cuckoo/Swift (= 1.4.0)
+  - Cuckoo/Swift (1.4.0)
+  - MobiusCore (0.3.0)
+  - MobiusExtras (0.3.0):
+    - MobiusCore (= 0.3.0)
+  - MobiusNimble (0.3.0):
+    - MobiusCore (= 0.3.0)
+    - MobiusTest (= 0.3.0)
+    - Nimble (~> 8.0.7)
+  - MobiusTest (0.3.0):
+    - MobiusCore (= 0.3.0)
+  - Nimble (8.0.9)
 
 DEPENDENCIES:
-  - MobiusCore (= 0.1.0-alpha)
-  - MobiusExtras (= 0.1.0-alpha)
-  - MobiusNimble (= 0.1.0-alpha)
-  - MobiusTest (= 0.1.0-alpha)
+  - Cuckoo (= 1.4.0)
+  - MobiusCore (= 0.3.0)
+  - MobiusExtras (= 0.3.0)
+  - MobiusNimble (= 0.3.0)
+  - MobiusTest (= 0.3.0)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
+    - Cuckoo
     - MobiusCore
     - MobiusExtras
     - MobiusNimble
@@ -25,12 +30,13 @@ SPEC REPOS:
     - Nimble
 
 SPEC CHECKSUMS:
-  MobiusCore: 900e9ac7e7f8a6e789b627ec454dbf38e2fa840f
-  MobiusExtras: 36bbd4a51632a97ae570defe6e25b448166ac4c5
-  MobiusNimble: 51bbcbc0faf95ab97dfd64f9370a256ec8a9d895
-  MobiusTest: d51526d35811190acc23643dd6da00eb3b407301
-  Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
+  Cuckoo: da26594ea25d227d788cd2f25466442a4348c486
+  MobiusCore: 2361e1b9c4775ebd56661a8859bdc0260cd569d7
+  MobiusExtras: 2cbecc1a8a954be37a4d75e758b9ffd62cd4c8db
+  MobiusNimble: 9bbdf32a9186a79c472b944f67e370ab8351818e
+  MobiusTest: 93bad240001b45e12b41d4e2afd6fea02e422d98
+  Nimble: 98b888285a615fd34f20e61753cf58ea1402bde4
 
-PODFILE CHECKSUM: 9c617cfb4e2fe24645d59f92ad5be4d0538b58db
+PODFILE CHECKSUM: 908edc1b911ea03f21dc0602f61221313bdbb676
 
-COCOAPODS: 1.6.0
+COCOAPODS: 1.9.3

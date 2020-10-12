@@ -1,4 +1,4 @@
-// Copyright (c) 2019 Spotify AB.
+// Copyright (c) 2020 Spotify AB.
 //
 // Licensed to the Apache Software Foundation (ASF) under one
 // or more contributor license agreements.  See the NOTICE file
@@ -21,19 +21,18 @@ import Foundation
 
 /// Handle for a connection created by a `Connectable`.
 ///
-/// Used for sending values to the connection and to dispose of it and all resources associated
-/// with it.
+/// Used for sending values to the connection and to dispose of it and all resources associated with it.
 public final class Connection<Value>: Disposable {
-    public typealias ValueType = Value
-
     private let acceptClosure: (Value) -> Void
     private let disposeClosure: () -> Void
 
+    /// Create a new connection that calls `acceptClosure` for incoming values, and `disposeClosure` when disposed.
     public init(acceptClosure: @escaping (Value) -> Void, disposeClosure: @escaping () -> Void) {
         self.acceptClosure = acceptClosure
         self.disposeClosure = disposeClosure
     }
 
+    /// Send a value to the connection.
     public func accept(_ value: Value) {
         acceptClosure(value)
     }

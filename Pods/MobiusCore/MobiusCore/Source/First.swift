@@ -1,4 +1,4 @@
-// Copyright (c) 2019 Spotify AB.
+// Copyright (c) 2020 Spotify AB.
 //
 // Licensed to the Apache Software Foundation (ASF) under one
 // or more contributor license agreements.  See the NOTICE file
@@ -20,26 +20,22 @@
 import Foundation
 
 /// The `First` structure defines the initial state of a Mobius loop.
-public struct First<Model, Effect> where Effect: Hashable {
+public struct First<Model, Effect> {
     /// The initial model object that should be used.
     public let model: Model
+
     /// An optional set of effects to initially dispatch.
     ///
     /// If empty, no effects will be dispatched.
-    public let effects: Set<Effect>
+    public let effects: [Effect]
 
-    /// Initialize a `First` object with the given model and
+    /// Create a `First` with the given model and effects.
     ///
     /// - Parameters:
     ///   - model: The initial model.
     ///   - effects: Any initial effects that should be dispatched.
-    public init(model: Model, effects: Set<Effect> = []) {
+    public init(model: Model, effects: [Effect] = []) {
         self.model = model
         self.effects = effects
     }
-}
-
-public extension First {
-    /// A Boolean indicating whether the `First` object has any effects or not.
-    var hasEffects: Bool { return !effects.isEmpty }
 }

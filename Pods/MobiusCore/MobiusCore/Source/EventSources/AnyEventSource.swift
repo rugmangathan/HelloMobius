@@ -1,4 +1,4 @@
-// Copyright (c) 2019 Spotify AB.
+// Copyright (c) 2020 Spotify AB.
 //
 // Licensed to the Apache Software Foundation (ASF) under one
 // or more contributor license agreements.  See the NOTICE file
@@ -20,20 +20,28 @@
 import Foundation
 
 /// The `AnyEventSource` class implements a `EventSource` type that sends events to subscribers.
-public class AnyEventSource<E>: EventSource {
-    public typealias Event = E
+public final class AnyEventSource<Event>: EventSource {
+    private let subscribeClosure: (@escaping Consumer<Event>) -> Disposable
 
-    private let subscribeClosure: (@escaping Consumer<E>) -> Disposable
+    /// Creates a type-erased `EventSource` that wraps the given instance.
+    public convenience init<Source: EventSource>(_ eventSource: Source) where Source.Event == Event {
+        let subscribeClosure: (@escaping Consumer<Event>) -> Disposable
 
-    public init<ES: EventSource>(_ base: ES) where ES.Event == E {
-        subscribeClosure = base.subscribe
+        if let anyEventSource = eventSource as? AnyEventSource {
+            subscribeClosure = anyEventSource.subscribeClosure
+        } else {
+            subscribeClosure = eventSource.subscribe
+        }
+
+        self.init(subscribeClosure)
     }
 
-    public init(_ closure: @escaping (@escaping Consumer<E>) -> Disposable) {
-        subscribeClosure = closure
+    /// Creates an anonymous `EventSource` that implements `subscribe` with the provided closure.
+    public init(_ subscribe: @escaping (@escaping Consumer<Event>) -> Disposable) {
+        subscribeClosure = subscribe
     }
 
-    public func subscribe(consumer eventConsumer: @escaping Consumer<E>) -> Disposable {
+    public func subscribe(consumer eventConsumer: @escaping Consumer<Event>) -> Disposable {
         return subscribeClosure(eventConsumer)
     }
 }

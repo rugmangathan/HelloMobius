@@ -1,4 +1,4 @@
-// Copyright (c) 2019 Spotify AB.
+// Copyright (c) 2020 Spotify AB.
 //
 // Licensed to the Apache Software Foundation (ASF) under one
 // or more contributor license agreements.  See the NOTICE file
@@ -19,17 +19,15 @@
 
 import Foundation
 
-/// Baseclass for creating a consumer based `connectable`. Invoking the `connection` functions
-/// will block the current thread until done.
+/// Base class for creating a consumer based `connectable`.
+///
+/// Invoking the `connection` functions will block the current thread until done.
 open class ConsumerConnectable<Input, Output>: Connectable {
-    public typealias InputType = Input
-    public typealias OutputType = Output
-
     private var innerConnectable: ClosureConnectable<Input, Output>
 
-    /// Initialise with a consumer (input, no output)
+    /// Initialise with a consumer (input, no output).
     ///
-    /// - Parameter consumer: Called when the `connection` `accept` function is called
+    /// - Parameter consumer: Called when the `connection`’s `accept` function is called.
     public init(_ consumer: @escaping Consumer<Input>) {
         innerConnectable = ClosureConnectable<Input, Output>(consumer)
     }

@@ -1,4 +1,4 @@
-// Copyright (c) 2019 Spotify AB.
+// Copyright (c) 2020 Spotify AB.
 //
 // Licensed to the Apache Software Foundation (ASF) under one
 // or more contributor license agreements.  See the NOTICE file
@@ -19,14 +19,11 @@
 
 import Foundation
 
-class ClosureConnectable<Input, Output>: Connectable {
-    public typealias InputType = Input
-    public typealias OutputType = Output
-
+final class ClosureConnectable<Input, Output>: Connectable {
     private var queue: DispatchQueue?
-    private var output: Consumer<OutputType>?
+    private var output: Consumer<Output>?
     private let closure: (Input) -> Output?
-    private let lock = NSRecursiveLock()
+    private let lock = Lock()
 
     // If the closure produces output, it will be passed to the consumer. If it doesnt, it wont (see `connect`).
     init(_ closure: @escaping (Input) -> Output?, queue: DispatchQueue? = nil) {
@@ -64,7 +61,7 @@ class ClosureConnectable<Input, Output>: Connectable {
     }
 
     func connect(_ consumer: @escaping Consumer<Output>) -> Connection<Input> {
-        return lock.synchronized { () -> Connection<InputType> in
+        return lock.synchronized { () -> Connection<Input> in
             self.output = consumer
             return Connection(
                 acceptClosure: { input in

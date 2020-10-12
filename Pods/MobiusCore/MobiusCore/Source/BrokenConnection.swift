@@ -1,4 +1,4 @@
-// Copyright (c) 2019 Spotify AB.
+// Copyright (c) 2020 Spotify AB.
 //
 // Licensed to the Apache Software Foundation (ASF) under one
 // or more contributor license agreements.  See the NOTICE file
@@ -19,16 +19,25 @@
 
 import Foundation
 
-public enum BrokenConnection<ValueType> {
-    public static func accept(_ value: ValueType) {
-        MobiusHooks.onError("'accept' called on invalid connection")
+/// A helper to construct `Connection`s that will fail when used.
+///
+/// `BrokenConnection.connection()` is used when functions return `Connection` fail an assertion. The resulting
+/// connection will trigger an assertion whenever its `accept` or `dispose` methods are called.
+@available(*, deprecated)
+public enum BrokenConnection<Value> {
+    public static func accept(_ value: Value) {
+        MobiusHooks.errorHandler("'accept' called on invalid connection of \(Value.self)", #file, #line)
     }
 
     public static func dispose() {
-        MobiusHooks.onError("'dispose' called on invalid connection")
+        MobiusHooks.errorHandler("'dispose' called on invalid connection of \(Value.self)", #file, #line)
     }
 
-    public static func connection() -> Connection<ValueType> {
+    /// Construct a broken connection.
+    ///
+    /// The resulting connection will trigger an assertion whenever its `accept` or `dispose` methods are
+    /// called.
+    public static func connection() -> Connection<Value> {
         return Connection(acceptClosure: accept, disposeClosure: dispose)
     }
 }

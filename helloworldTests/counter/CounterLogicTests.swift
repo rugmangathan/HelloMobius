@@ -11,7 +11,7 @@ import XCTest
 import MobiusTest
 
 class CounterLogicTests: XCTestCase {
-  private let updateSpec = UpdateSpec<CounterLoopTypes>(update)
+  private let updateSpec = UpdateSpec<Int, CounterEvent, CounterEffect>(update)
 
   func test_user_can_increment_counter() {
     updateSpec

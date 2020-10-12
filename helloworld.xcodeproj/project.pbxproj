@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,14 +16,14 @@
 		55BBEA7E224156560094EE4C /* helloworldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BBEA7D224156560094EE4C /* helloworldTests.swift */; };
 		55BBEA89224156560094EE4C /* helloworldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BBEA88224156560094EE4C /* helloworldUITests.swift */; };
 		55BBEA99224158880094EE4C /* CounterLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BBEA98224158880094EE4C /* CounterLogicTests.swift */; };
-		55BBEA9B224158DB0094EE4C /* CounterLoopTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BBEA9A224158DB0094EE4C /* CounterLoopTypes.swift */; };
 		55BBEA9D224159390094EE4C /* CounterEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BBEA9C224159390094EE4C /* CounterEvent.swift */; };
 		55BBEA9F2241596A0094EE4C /* CounterEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BBEA9E2241596A0094EE4C /* CounterEffect.swift */; };
 		55BBEAA12241599B0094EE4C /* CounterLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BBEAA02241599B0094EE4C /* CounterLogic.swift */; };
 		55BBEAA322415E730094EE4C /* CounterEffectHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BBEAA222415E730094EE4C /* CounterEffectHandler.swift */; };
 		55BBEAA52241625B0094EE4C /* ControllerViewActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BBEAA42241625B0094EE4C /* ControllerViewActions.swift */; };
 		55BBEAA7224218DF0094EE4C /* CounterEffectHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BBEAA6224218DF0094EE4C /* CounterEffectHandlerTests.swift */; };
-		55BBEAA922421B8B0094EE4C /* MockCounterViewActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BBEAA822421B8B0094EE4C /* MockCounterViewActions.swift */; };
+		55BBEAA922421B8B0094EE4C /* SpyCounterViewActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BBEAA822421B8B0094EE4C /* SpyCounterViewActions.swift */; };
+		63D6E53C2534902100F9F439 /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D6E53B2534902100F9F439 /* GeneratedMocks.swift */; };
 		89D4190AACA901DA97644F11 /* Pods_helloworld.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9583FA7167FB09DD8603DABA /* Pods_helloworld.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,14 +60,14 @@
 		55BBEA88224156560094EE4C /* helloworldUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helloworldUITests.swift; sourceTree = "<group>"; };
 		55BBEA8A224156560094EE4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55BBEA98224158880094EE4C /* CounterLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterLogicTests.swift; sourceTree = "<group>"; };
-		55BBEA9A224158DB0094EE4C /* CounterLoopTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterLoopTypes.swift; sourceTree = "<group>"; };
 		55BBEA9C224159390094EE4C /* CounterEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterEvent.swift; sourceTree = "<group>"; };
 		55BBEA9E2241596A0094EE4C /* CounterEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterEffect.swift; sourceTree = "<group>"; };
 		55BBEAA02241599B0094EE4C /* CounterLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterLogic.swift; sourceTree = "<group>"; };
 		55BBEAA222415E730094EE4C /* CounterEffectHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterEffectHandler.swift; sourceTree = "<group>"; };
 		55BBEAA42241625B0094EE4C /* ControllerViewActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerViewActions.swift; sourceTree = "<group>"; };
 		55BBEAA6224218DF0094EE4C /* CounterEffectHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterEffectHandlerTests.swift; sourceTree = "<group>"; };
-		55BBEAA822421B8B0094EE4C /* MockCounterViewActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCounterViewActions.swift; sourceTree = "<group>"; };
+		55BBEAA822421B8B0094EE4C /* SpyCounterViewActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyCounterViewActions.swift; sourceTree = "<group>"; };
+		63D6E53B2534902100F9F439 /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
 		9583FA7167FB09DD8603DABA /* Pods_helloworld.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_helloworld.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCD1774D43AD348657B1EE35 /* Pods-helloworld.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-helloworld.release.xcconfig"; path = "Target Support Files/Pods-helloworld/Pods-helloworld.release.xcconfig"; sourceTree = "<group>"; };
 		EC93F5AE31F440674FDE1038 /* Pods-helloworld.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-helloworld.debug.xcconfig"; path = "Target Support Files/Pods-helloworld/Pods-helloworld.debug.xcconfig"; sourceTree = "<group>"; };
@@ -140,6 +140,7 @@
 		55BBEA7C224156560094EE4C /* helloworldTests */ = {
 			isa = PBXGroup;
 			children = (
+				63D6E51925348D7300F9F439 /* Mocks */,
 				55BBEA97224158690094EE4C /* counter */,
 				55BBEA7D224156560094EE4C /* helloworldTests.swift */,
 				55BBEA7F224156560094EE4C /* Info.plist */,
@@ -160,7 +161,6 @@
 			isa = PBXGroup;
 			children = (
 				55BBEA6A224156550094EE4C /* CounterViewController.swift */,
-				55BBEA9A224158DB0094EE4C /* CounterLoopTypes.swift */,
 				55BBEA9E2241596A0094EE4C /* CounterEffect.swift */,
 				55BBEA9C224159390094EE4C /* CounterEvent.swift */,
 				55BBEAA02241599B0094EE4C /* CounterLogic.swift */,
@@ -175,9 +175,17 @@
 			children = (
 				55BBEA98224158880094EE4C /* CounterLogicTests.swift */,
 				55BBEAA6224218DF0094EE4C /* CounterEffectHandlerTests.swift */,
-				55BBEAA822421B8B0094EE4C /* MockCounterViewActions.swift */,
+				55BBEAA822421B8B0094EE4C /* SpyCounterViewActions.swift */,
 			);
 			path = counter;
+			sourceTree = "<group>";
+		};
+		63D6E51925348D7300F9F439 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				63D6E53B2534902100F9F439 /* GeneratedMocks.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		657A3DFD1D724AD6A7AD310C /* Pods */ = {
@@ -227,6 +235,7 @@
 			buildConfigurationList = 55BBEA90224156560094EE4C /* Build configuration list for PBXNativeTarget "helloworldTests" */;
 			buildPhases = (
 				65FC0587E820BE6A2199A609 /* [CP] Check Pods Manifest.lock */,
+				63D6E51825348D5F00F9F439 /* Cuckoo - Run scripts */,
 				55BBEA75224156560094EE4C /* Sources */,
 				55BBEA76224156560094EE4C /* Frameworks */,
 				55BBEA77224156560094EE4C /* Resources */,
@@ -339,23 +348,34 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-helloworld/Pods-helloworld-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/MobiusCore/MobiusCore.framework",
-				"${BUILT_PRODUCTS_DIR}/MobiusExtras/MobiusExtras.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-helloworld/Pods-helloworld-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MobiusCore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MobiusExtras.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-helloworld/Pods-helloworld-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-helloworld/Pods-helloworld-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		63D6E51825348D5F00F9F439 /* Cuckoo - Run scripts */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Cuckoo - Run scripts";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/Mocks/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/helloworldTests/counter/SpyCounterViewActions.swift\" \n";
 		};
 		65FC0587E820BE6A2199A609 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -385,22 +405,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-helloworldTests/Pods-helloworldTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/MobiusCore/MobiusCore.framework",
-				"${BUILT_PRODUCTS_DIR}/MobiusNimble/MobiusNimble.framework",
-				"${BUILT_PRODUCTS_DIR}/MobiusTest/MobiusTest.framework",
-				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-helloworldTests/Pods-helloworldTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MobiusCore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MobiusNimble.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MobiusTest.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-helloworldTests/Pods-helloworldTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -439,7 +448,6 @@
 				55BBEA6B224156550094EE4C /* CounterViewController.swift in Sources */,
 				55BBEAA322415E730094EE4C /* CounterEffectHandler.swift in Sources */,
 				55BBEAA12241599B0094EE4C /* CounterLogic.swift in Sources */,
-				55BBEA9B224158DB0094EE4C /* CounterLoopTypes.swift in Sources */,
 				55BBEA69224156550094EE4C /* AppDelegate.swift in Sources */,
 				55BBEA9D224159390094EE4C /* CounterEvent.swift in Sources */,
 				55BBEAA52241625B0094EE4C /* ControllerViewActions.swift in Sources */,
@@ -452,9 +460,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				55BBEA7E224156560094EE4C /* helloworldTests.swift in Sources */,
-				55BBEAA922421B8B0094EE4C /* MockCounterViewActions.swift in Sources */,
+				55BBEAA922421B8B0094EE4C /* SpyCounterViewActions.swift in Sources */,
 				55BBEA99224158880094EE4C /* CounterLogicTests.swift in Sources */,
 				55BBEAA7224218DF0094EE4C /* CounterEffectHandlerTests.swift in Sources */,
+				63D6E53C2534902100F9F439 /* GeneratedMocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

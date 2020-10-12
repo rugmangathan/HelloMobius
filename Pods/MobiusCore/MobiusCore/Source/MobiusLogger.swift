@@ -1,4 +1,4 @@
-// Copyright (c) 2019 Spotify AB.
+// Copyright (c) 2020 Spotify AB.
 //
 // Licensed to the Apache Software Foundation (ASF) under one
 // or more contributor license agreements.  See the NOTICE file
@@ -20,22 +20,26 @@
 import Foundation
 
 /// Protocol for logging init and update calls.
-public protocol MobiusLogger: LoopTypes {
-    ///  Called right before the `Initiator` function is called.
+public protocol MobiusLogger {
+    associatedtype Model
+    associatedtype Event
+    associatedtype Effect
+
+    ///  Called right before the `Initiate` function is called.
     ///
     ///  This method mustn't block, as it'll hinder the loop from running. It will be called on the
-    ///  same thread as the `Initiator` function.
+    ///  same thread as the `Initiate` function.
     ///
-    /// - Parameter model: the model that will be passed to the initiator function
+    /// - Parameter model: the model that will be passed to the initiate function
     func willInitiate(model: Model)
 
-    /// Called right after the `Initiator` function is called.
+    /// Called right after the `Initiate` function is called.
     ///
     /// This method mustn't block, as it'll hinder the loop from running. It will be called on the
-    /// same thread as the initiator function.
+    /// same thread as the initiate function.
     ///
     /// - Parameters:
-    ///     - model: the model that was passed to the initiator
+    ///     - model: the model that was passed to the initiate function
     ///     - first: the resulting `First` instance
     func didInitiate(model: Model, first: First<Model, Effect>)
 
@@ -61,59 +65,52 @@ public protocol MobiusLogger: LoopTypes {
     func didUpdate(model: Model, event: Event, next: Next<Model, Effect>)
 }
 
-class NoopLogger<T: LoopTypes>: MobiusLogger {
-    typealias Model = T.Model
-    typealias Event = T.Event
-    typealias Effect = T.Effect
-
-    func willInitiate(model: T.Model) {
-        // empty
-    }
-
-    func didInitiate(model: T.Model, first: First<T.Model, T.Effect>) {
-        // empty
-    }
-
-    func willUpdate(model: T.Model, event: T.Event) {
-        // empty
-    }
-
-    func didUpdate(model: T.Model, event: T.Event, next: Next<T.Model, T.Effect>) {
-        // empty
-    }
+public extension MobiusLogger {
+    func willInitiate(model: Model) {}
+    func didInitiate(model: Model, first: First<Model, Effect>) {}
+    func willUpdate(model: Model, event: Event) {}
+    func didUpdate(model: Model, event: Event, next: Next<Model, Effect>) {}
 }
 
-/// Type-erased `MobiusLogger`.
-public class AnyMobiusLogger<T: LoopTypes>: MobiusLogger {
-    public typealias Model = T.Model
-    public typealias Event = T.Event
-    public typealias Effect = T.Effect
+final class NoopLogger<Model, Event, Effect>: MobiusLogger {}
 
+/// Type-erased wrapper for `MobiusLogger`s
+public final class AnyMobiusLogger<Model, Event, Effect>: MobiusLogger {
     private let willInitiateClosure: (Model) -> Void
     private let didInitiateClosure: (Model, First<Model, Effect>) -> Void
     private let willUpdateClosure: (Model, Event) -> Void
     private let didUpdateClosure: (Model, Event, Next<Model, Effect>) -> Void
 
-    public init<L: MobiusLogger>(_ base: L) where L.Model == Model, L.Event == Event, L.Effect == Effect {
-        willInitiateClosure = base.willInitiate
-        didInitiateClosure = base.didInitiate
-        willUpdateClosure = base.willUpdate
-        didUpdateClosure = base.didUpdate
+    /// Creates a type-erased `MobiusLogger` that wraps the given instance.
+    public init<Logger: MobiusLogger>(
+        _ logger: Logger
+    ) where Logger.Model == Model, Logger.Event == Event, Logger.Effect == Effect {
+        if let anyLogger = logger as? AnyMobiusLogger {
+            willInitiateClosure = anyLogger.willInitiateClosure
+            didInitiateClosure = anyLogger.didInitiateClosure
+            willUpdateClosure = anyLogger.willUpdateClosure
+            didUpdateClosure = anyLogger.didUpdateClosure
+        } else {
+            willInitiateClosure = logger.willInitiate
+            didInitiateClosure = logger.didInitiate
+            willUpdateClosure = logger.willUpdate
+            didUpdateClosure = logger.didUpdate
+        }
     }
 
-    public func willInitiate(model: T.Model) {
+    public func willInitiate(model: Model) {
         willInitiateClosure(model)
     }
 
-    public func didInitiate(model: T.Model, first: First<T.Model, T.Effect>) {
+    public func didInitiate(model: Model, first: First<Model, Effect>) {
         didInitiateClosure(model, first)
     }
 
-    public func willUpdate(model: T.Model, event: T.Event) {
+    public func willUpdate(model: Model, event: Event) {
         willUpdateClosure(model, event)
     }
 
-    public func didUpdate(model: T.Model, event: T.Event, next: Next<T.Model, T.Effect>) {
+    public func didUpdate(model: Model, event: Event, next: Next<Model, Effect>) {
         didUpdateClosure(model, event, next)
     }
 }
