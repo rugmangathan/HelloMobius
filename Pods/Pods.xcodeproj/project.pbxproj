@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -244,14 +244,14 @@
 		1CBDCBF1A4B84051C7B3B21F069D5126 /* XCTestObservationCenter+Register.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "XCTestObservationCenter+Register.m"; path = "Sources/NimbleObjectiveC/XCTestObservationCenter+Register.m"; sourceTree = "<group>"; };
 		1D9B2D5302BD5D54030A6B558B66B67C /* First.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = First.swift; path = MobiusCore/Source/First.swift; sourceTree = "<group>"; };
 		1EBBA181CB83C49DEAB652376B61C547 /* ExpectationMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpectationMessage.swift; path = Sources/Nimble/ExpectationMessage.swift; sourceTree = "<group>"; };
-		20B51394B6E63BBA890DC6963148301A /* Pods_helloworldTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_helloworldTests.framework; path = "Pods-helloworldTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		20B51394B6E63BBA890DC6963148301A /* Pods_helloworldTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_helloworldTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2113BDAFD566EE28C81DC1AFEE75FB10 /* Predicate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Predicate.swift; path = Sources/Nimble/Matchers/Predicate.swift; sourceTree = "<group>"; };
 		2176A5CEABAB929C8E4286FB69E2E3A5 /* ConsoleLogger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConsoleLogger.swift; path = MobiusExtras/Source/ConsoleLogger.swift; sourceTree = "<group>"; };
 		23D7F4116C5E44405D18DC1686940F03 /* MobiusNimble.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MobiusNimble.modulemap; sourceTree = "<group>"; };
 		24AE264309B2CF12E3B5D9AED2837117 /* Disposable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Disposable.swift; path = MobiusCore/Source/Disposables/Disposable.swift; sourceTree = "<group>"; };
 		2801C1FE34E8DF0257E4D70175437169 /* MergedEventSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MergedEventSource.swift; path = MobiusCore/Source/EventSources/MergedEventSource.swift; sourceTree = "<group>"; };
 		2B9E02C2CD853FE432032149D1549182 /* Async.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Async.swift; path = Sources/Nimble/Matchers/Async.swift; sourceTree = "<group>"; };
-		2C0D1AD9176053B0D39D1DAC75E37CD2 /* MobiusExtras.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MobiusExtras.framework; path = MobiusExtras.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C0D1AD9176053B0D39D1DAC75E37CD2 /* MobiusExtras.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MobiusExtras.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C6289010EDB2C83004D0C026FBE5157 /* Await.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Await.swift; path = Sources/Nimble/Utils/Await.swift; sourceTree = "<group>"; };
 		2D4F0D115DA33BDD0E1D878331D21CFF /* Equal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Equal.swift; path = Sources/Nimble/Matchers/Equal.swift; sourceTree = "<group>"; };
 		2D99515E65B707D7A5D99119352341B2 /* Next.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Next.swift; path = MobiusCore/Source/Next.swift; sourceTree = "<group>"; };
@@ -284,7 +284,7 @@
 		5ADE9A1F30C6179CE75770EFF0BDAB4A /* BeGreaterThanOrEqualTo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeGreaterThanOrEqualTo.swift; path = Sources/Nimble/Matchers/BeGreaterThanOrEqualTo.swift; sourceTree = "<group>"; };
 		5C568602B283F48B8AA2EDFB1681C161 /* MobiusCore-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MobiusCore-Info.plist"; sourceTree = "<group>"; };
 		5CF2F415576E56BCF6FFDEAFCF0F0A8E /* NMBExceptionCapture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NMBExceptionCapture.h; path = Sources/NimbleObjectiveC/NMBExceptionCapture.h; sourceTree = "<group>"; };
-		5D6709BA1AEB05BC3370C20C911EFB6F /* MobiusTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MobiusTest.framework; path = MobiusTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D6709BA1AEB05BC3370C20C911EFB6F /* MobiusTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MobiusTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D6913D6BF516454A195B7DC87959502 /* NMBExceptionCapture.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NMBExceptionCapture.m; path = Sources/NimbleObjectiveC/NMBExceptionCapture.m; sourceTree = "<group>"; };
 		5D7ADBAC0D14E321050A771FE4472FA1 /* Nimble.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Nimble.modulemap; sourceTree = "<group>"; };
 		5F888DB5C6E2E84461085F2580DED92E /* NimbleNextMatchers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NimbleNextMatchers.swift; path = MobiusNimble/Source/NimbleNextMatchers.swift; sourceTree = "<group>"; };
@@ -322,7 +322,7 @@
 		93F6050F063701AC36699524ECBAC29B /* AllPass.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AllPass.swift; path = Sources/Nimble/Matchers/AllPass.swift; sourceTree = "<group>"; };
 		9573E7201D2F3446CCDA9EAC6ED80C59 /* Pods-helloworld-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-helloworld-frameworks.sh"; sourceTree = "<group>"; };
 		959131D3F5668AC200D75EFD7FF4C5F0 /* Locking.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Locking.swift; path = MobiusCore/Source/Locking.swift; sourceTree = "<group>"; };
-		968EFEF1750C4DD1627F6FE0F18F7C89 /* Pods_helloworld.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_helloworld.framework; path = "Pods-helloworld.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		968EFEF1750C4DD1627F6FE0F18F7C89 /* Pods_helloworld.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_helloworld.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96B2E76F47B78B4B1C922A9958ACA333 /* DSL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DSL.h; path = Sources/NimbleObjectiveC/DSL.h; sourceTree = "<group>"; };
 		96CD7A1DD2777323C01F79675E0E5452 /* MatcherProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MatcherProtocols.swift; path = Sources/Nimble/Matchers/MatcherProtocols.swift; sourceTree = "<group>"; };
 		972CCDFF37EEBEEE9810CE05D3AC7338 /* BeCloseTo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeCloseTo.swift; path = Sources/Nimble/Matchers/BeCloseTo.swift; sourceTree = "<group>"; };
@@ -333,7 +333,7 @@
 		9BED81A5B7F392D8A4954BDB87D75602 /* HaveCount.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HaveCount.swift; path = Sources/Nimble/Matchers/HaveCount.swift; sourceTree = "<group>"; };
 		9C6E3C0FA3F6EDB0FEFB1D16A3105039 /* AssertionDispatcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssertionDispatcher.swift; path = Sources/Nimble/Adapters/AssertionDispatcher.swift; sourceTree = "<group>"; };
 		9D1F7DD00387CDB81DFB74BCAF2C2A68 /* Connection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Connection.swift; path = MobiusCore/Source/Connection.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DF86784393001E8C65315DDFEEC6D34 /* Pods-helloworld-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-helloworld-umbrella.h"; sourceTree = "<group>"; };
 		9E070443084DE5679A53AC9CCA011D80 /* MobiusTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MobiusTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F810CBA0152A8A2AD24BA044E2B18AF /* NMBStringify.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NMBStringify.h; path = Sources/NimbleObjectiveC/NMBStringify.h; sourceTree = "<group>"; };
@@ -350,10 +350,10 @@
 		B6B33398D751DD1B8652D08BEF70643D /* CwlCatchException.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CwlCatchException.m; path = Carthage/Checkouts/CwlCatchException/Sources/CwlCatchExceptionSupport/CwlCatchException.m; sourceTree = "<group>"; };
 		B926088A948CCBE5A879AB3EF778F526 /* NMBObjCMatcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NMBObjCMatcher.swift; path = Sources/Nimble/Adapters/NMBObjCMatcher.swift; sourceTree = "<group>"; };
 		BAF13AE5502D01F0BFAC96843F97EB9B /* ConnectableClass.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConnectableClass.swift; path = MobiusExtras/Source/ConnectableClass.swift; sourceTree = "<group>"; };
-		BB1CEA3BE2DBE77AFBF0ADBDBB0A0B7C /* MobiusNimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MobiusNimble.framework; path = MobiusNimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB1CEA3BE2DBE77AFBF0ADBDBB0A0B7C /* MobiusNimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MobiusNimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB841636F856A5848B2925A4E3D0FA98 /* CwlPreconditionTesting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CwlPreconditionTesting.h; path = Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlPreconditionTesting/Mach/CwlPreconditionTesting.h; sourceTree = "<group>"; };
 		BBF6D4722B535C6C8FB7BE2D9D137BB2 /* EventSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EventSource.swift; path = MobiusCore/Source/EventSources/EventSource.swift; sourceTree = "<group>"; };
-		BC5A59679BEA24A4D972E68C2F37117D /* MobiusCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MobiusCore.framework; path = MobiusCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC5A59679BEA24A4D972E68C2F37117D /* MobiusCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MobiusCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD3870F175373F18DC505F65D55D86D0 /* BrokenConnection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BrokenConnection.swift; path = MobiusCore/Source/BrokenConnection.swift; sourceTree = "<group>"; };
 		BE58E29AC0B1E469B730E007C6DD5512 /* Pods-helloworld.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-helloworld.modulemap"; sourceTree = "<group>"; };
 		C0090E6223C012244D3FF8D54CA9B543 /* CwlMachBadInstructionHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CwlMachBadInstructionHandler.m; path = Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlMachBadInstructionHandler/CwlMachBadInstructionHandler.m; sourceTree = "<group>"; };
@@ -361,10 +361,10 @@
 		C0976AC75AE73E836BF694A961CE0988 /* Mobius.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mobius.swift; path = MobiusCore/Source/Mobius.swift; sourceTree = "<group>"; };
 		C12E71C1CAE10E45A434810D6A6110E9 /* ConnectableContramap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConnectableContramap.swift; path = MobiusExtras/Source/ConnectableContramap.swift; sourceTree = "<group>"; };
 		C1FF17E0CD75886D90DF57391796F9C1 /* AssertionRecorder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssertionRecorder.swift; path = Sources/Nimble/Adapters/AssertionRecorder.swift; sourceTree = "<group>"; };
-		C2ED0F9485A4E22576CA9D1938D7ADDC /* mach_excServer.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mach_excServer.c; path = Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlMachBadInstructionHandler/mach_excServer.c; sourceTree = "<group>"; };
+		C2ED0F9485A4E22576CA9D1938D7ADDC /* mach_excServer.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mach_excServer.c; path = Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlMachBadInstructionHandler/mach_excServer.c; sourceTree = "<group>"; };
 		C6058EDDAE1DB1B9318DF20D7025F56C /* MobiusTest.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MobiusTest.modulemap; sourceTree = "<group>"; };
 		C8925036D488442107317A1FE14E4F27 /* SatisfyAnyOf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SatisfyAnyOf.swift; path = Sources/Nimble/Matchers/SatisfyAnyOf.swift; sourceTree = "<group>"; };
-		CAE68B39EE4A63B5F10CE89945AC6306 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Nimble.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAE68B39EE4A63B5F10CE89945AC6306 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB0BA9841E074DEA8A0D7BD050553A2C /* Expression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Expression.swift; path = Sources/Nimble/Expression.swift; sourceTree = "<group>"; };
 		CBAD1B20F668DD4CFBB9A03EE5B19729 /* mach_excServer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mach_excServer.h; path = Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlMachBadInstructionHandler/mach_excServer.h; sourceTree = "<group>"; };
 		CD29EF840063DED8215280F0990CEADF /* MobiusCore-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MobiusCore-umbrella.h"; sourceTree = "<group>"; };
@@ -510,7 +510,6 @@
 				D936E72A3B7404CE015BAC6F0998C558 /* NoEffect.swift */,
 				ED4B538BB0E77DBB5B3E1AF0B550B25C /* Support Files */,
 			);
-			name = MobiusCore;
 			path = MobiusCore;
 			sourceTree = "<group>";
 		};
@@ -607,7 +606,6 @@
 				5F888DB5C6E2E84461085F2580DED92E /* NimbleNextMatchers.swift */,
 				038923C93B60FA518F802DBF6B5B2619 /* Support Files */,
 			);
-			name = MobiusNimble;
 			path = MobiusNimble;
 			sourceTree = "<group>";
 		};
@@ -710,7 +708,6 @@
 				1CBDCBF1A4B84051C7B3B21F069D5126 /* XCTestObservationCenter+Register.m */,
 				E26A15FD4D02B8D948207301D3D7294E /* Support Files */,
 			);
-			name = Nimble;
 			path = Nimble;
 			sourceTree = "<group>";
 		};
@@ -752,7 +749,6 @@
 				D3BF024557B0ECF97F02585CD69E3EB3 /* UpdateSpec.swift */,
 				5327623030950C587F29FB19BDEAA3F9 /* Support Files */,
 			);
-			name = MobiusTest;
 			path = MobiusTest;
 			sourceTree = "<group>";
 		};
@@ -766,7 +762,6 @@
 				427F6B498F0999D85A02EA11036F7523 /* EventSource+Extensions.swift */,
 				A8F0E26E6A892C8A9F5D5A442A18794A /* Support Files */,
 			);
-			name = MobiusExtras;
 			path = MobiusExtras;
 			sourceTree = "<group>";
 		};
@@ -1001,14 +996,15 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1200;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			productRefGroup = 588F2FDB022BB9E4229BA6B3D7714430 /* Products */;
@@ -1325,11 +1321,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-helloworld/Pods-helloworld-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-helloworld/Pods-helloworld.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1349,6 +1341,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1371,6 +1364,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1427,11 +1421,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-helloworldTests/Pods-helloworldTests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-helloworldTests/Pods-helloworldTests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1464,12 +1454,8 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MobiusTest/MobiusTest-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MobiusTest/MobiusTest-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MobiusTest/MobiusTest.modulemap";
 				PRODUCT_MODULE_NAME = MobiusTest;
 				PRODUCT_NAME = MobiusTest;
@@ -1501,11 +1487,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-helloworld/Pods-helloworld-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-helloworld/Pods-helloworld.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1538,12 +1520,8 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Nimble/Nimble-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Nimble/Nimble-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Nimble/Nimble.modulemap";
 				PRODUCT_MODULE_NAME = Nimble;
 				PRODUCT_NAME = Nimble;
@@ -1575,12 +1553,8 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MobiusExtras/MobiusExtras-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MobiusExtras/MobiusExtras-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MobiusExtras/MobiusExtras.modulemap";
 				PRODUCT_MODULE_NAME = MobiusExtras;
 				PRODUCT_NAME = MobiusExtras;
@@ -1612,12 +1586,8 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MobiusCore/MobiusCore-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MobiusCore/MobiusCore-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MobiusCore/MobiusCore.modulemap";
 				PRODUCT_MODULE_NAME = MobiusCore;
 				PRODUCT_NAME = MobiusCore;
@@ -1636,6 +1606,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1658,6 +1629,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1685,8 +1657,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -1710,11 +1681,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-helloworldTests/Pods-helloworldTests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-helloworldTests/Pods-helloworldTests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1748,12 +1715,8 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MobiusExtras/MobiusExtras-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MobiusExtras/MobiusExtras-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MobiusExtras/MobiusExtras.modulemap";
 				PRODUCT_MODULE_NAME = MobiusExtras;
 				PRODUCT_NAME = MobiusExtras;
@@ -1784,12 +1747,8 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MobiusCore/MobiusCore-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MobiusCore/MobiusCore-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MobiusCore/MobiusCore.modulemap";
 				PRODUCT_MODULE_NAME = MobiusCore;
 				PRODUCT_NAME = MobiusCore;
@@ -1820,12 +1779,8 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MobiusNimble/MobiusNimble-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MobiusNimble/MobiusNimble-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MobiusNimble/MobiusNimble.modulemap";
 				PRODUCT_MODULE_NAME = MobiusNimble;
 				PRODUCT_NAME = MobiusNimble;
@@ -1857,12 +1812,8 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MobiusNimble/MobiusNimble-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MobiusNimble/MobiusNimble-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MobiusNimble/MobiusNimble.modulemap";
 				PRODUCT_MODULE_NAME = MobiusNimble;
 				PRODUCT_NAME = MobiusNimble;
@@ -1893,12 +1844,8 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MobiusTest/MobiusTest-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MobiusTest/MobiusTest-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MobiusTest/MobiusTest.modulemap";
 				PRODUCT_MODULE_NAME = MobiusTest;
 				PRODUCT_NAME = MobiusTest;
@@ -1929,12 +1876,8 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Nimble/Nimble-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Nimble/Nimble-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Nimble/Nimble.modulemap";
 				PRODUCT_MODULE_NAME = Nimble;
 				PRODUCT_NAME = Nimble;

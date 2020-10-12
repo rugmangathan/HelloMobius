@@ -48,9 +48,11 @@ class CounterViewController: UIViewController, CounterViewActions {
   }
 
   func showCannotGoBelowZeroAlert() {
-    let alertView = UIAlertController
-      .init(title: "Bummer", message: "Can't go below zero :(", preferredStyle: .alert)
-    alertView.addAction(UIAlertAction(title: "OK", style: .default))
-    present(alertView, animated: true)
+    DispatchQueue.main.async {
+      let alertView = UIAlertController
+        .init(title: "Bummer", message: "Can't go below zero :(", preferredStyle: .alert)
+      alertView.addAction(UIAlertAction(title: "OK", style: .default))
+      self.present(alertView, animated: true)
+    }
   }
 }
